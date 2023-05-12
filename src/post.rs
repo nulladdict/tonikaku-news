@@ -66,6 +66,9 @@ fn get_last_modified_time(path: &PathBuf) -> Result<DateTime<Utc>> {
     let last_modified = String::from_utf8(output).context("not a vaild string: {output:?}")?;
     let last_modified = last_modified.trim();
     if last_modified.is_empty() {
+        if std::env::var("CI").is_ok() {
+            return Err(anyhow::anyhow!("cannot get last modified time for {path:?}"));
+        }
         return Ok(offset::Utc::now());
     };
     Ok(DateTime::parse_from_rfc3339(last_modified)?.into())
