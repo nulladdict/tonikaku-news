@@ -37,6 +37,8 @@ fn add_index(posts: &[Post]) -> Result<()> {
 <head>
   <meta charset="utf-8">
   <title>Tonikaku News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ad-hoc интересности о фронтенде, вебе и не только">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="./feed.rss" />
   <style>
     :root {{
