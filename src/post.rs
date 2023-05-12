@@ -1,7 +1,8 @@
+use std::process::Command;
 use std::{fs, path::PathBuf};
 
 use anyhow::{Context, Result};
-use chrono::{DateTime, NaiveDate, Utc};
+use chrono::{offset, DateTime, NaiveDate, Utc};
 use lazy_static::lazy_static;
 use regex::{Regex, RegexBuilder};
 
@@ -55,8 +56,17 @@ fn get_title(path: &PathBuf) -> Result<String> {
 }
 
 fn get_last_modified_time(path: &PathBuf) -> Result<DateTime<Utc>> {
-    let metadata = fs::metadata(path)?;
-    let last_modified = metadata.modified()?;
-    let last_modified = DateTime::<Utc>::from(last_modified);
-    Ok(last_modified)
+    let output = Command::new("sh")
+        .arg("-c")
+        .arg(format!(
+            "git log -1 --format=%cd --date=iso-strict {path:?}"
+        ))
+        .output()?
+        .stdout;
+    let last_modified = String::from_utf8(output).context("not a vaild string: {output:?}")?;
+    let last_modified = last_modified.trim();
+    if last_modified.is_empty() {
+        return Ok(offset::Utc::now());
+    };
+    Ok(DateTime::parse_from_rfc3339(last_modified)?.into())
 }
