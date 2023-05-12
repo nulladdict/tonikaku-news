@@ -1,7 +1,7 @@
 use std::{fs, io::Write};
 
 use anyhow::Result;
-use rss::{Channel, Item};
+use rss::{Channel, Guid, Item};
 
 use crate::post::Post;
 
@@ -73,6 +73,10 @@ fn add_feed(posts: &[Post]) -> Result<()> {
             .map(|post| Item {
                 title: Some(post.title.clone()),
                 link: Some(post.link.clone()),
+                guid: Some(Guid {
+                    value: post.link.clone(),
+                    permalink: true,
+                }),
                 pub_date: Some(post.pub_time.to_rfc2822()),
                 ..Item::default()
             })
