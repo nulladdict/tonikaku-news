@@ -12,3 +12,4 @@
 - [Короткая неделя — длинные ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-05-04.md) (04.05.2023)
 - [Неделя пролетела незаметно, пора и ссылками поделиться](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-05-12.md) (12.05.2023)
 - [Присмотрись к ссылке прежде чем кликнуть](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-05-19.md) (19.05.2023)
+- [Я твой домен зазиповал](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-05-26.md) (26.05.2023)
