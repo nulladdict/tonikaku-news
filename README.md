@@ -15,3 +15,4 @@
 - [Я твой домен зазиповал](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-05-26.md) (26.05.2023)
 - [Летние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-02.md) (02.06.2023)
 - [Ссылок не было, наскреб что было](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-09.md) (09.06.2023)
+- [Дэн в отпуске, реакт твиттер в опасности](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-16.md) (16.06.2023)
