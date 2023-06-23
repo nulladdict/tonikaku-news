@@ -16,3 +16,4 @@
 - [Летние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-02.md) (02.06.2023)
 - [Ссылок не было, наскреб что было](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-09.md) (09.06.2023)
 - [Дэн в отпуске, реакт твиттер в опасности](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-16.md) (16.06.2023)
+- [Как уследить за всеми обновлениями?](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-23.md) (23.06.2023)
