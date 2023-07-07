@@ -18,3 +18,4 @@
 - [Дэн в отпуске, реакт твиттер в опасности](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-16.md) (16.06.2023)
 - [Как уследить за всеми обновлениями?](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-23.md) (23.06.2023)
 - [Не недели без драмы в твиттере](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-06-30.md) (30.06.2023)
+- [К пятнице твиттер снова можно читать без логина и лимитов](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-07-07.md) (07.07.2023)
