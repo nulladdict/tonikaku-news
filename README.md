@@ -22,3 +22,4 @@
 - [Сегодня же пятница!](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-07-14.md) (14.07.2023)
 - [Не пятницы без ссылок](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-07-21.md) (21.07.2023)
 - [Лучше поздние ссылки чем никаких](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-08-04.md) (04.08.2023)
+- [Субботние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-08-12.md) (12.08.2023)
