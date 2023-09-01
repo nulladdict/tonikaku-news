@@ -24,3 +24,4 @@
 - [Лучше поздние ссылки чем никаких](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-08-04.md) (04.08.2023)
 - [Субботние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-08-12.md) (12.08.2023)
 - [Хаки, сюрпризы, и новинки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-08-19.md) (19.08.2023)
+- [Осенние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-01.md) (01.09.2023)
