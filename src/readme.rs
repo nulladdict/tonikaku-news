@@ -7,6 +7,7 @@ use crate::post::Post;
 pub fn update_readme(posts: &[Post]) -> Result<()> {
     let posts = posts
         .iter()
+        .rev()
         .map(|post| {
             let date = post.real_date.format("%d.%m.%Y");
             let text = format!("- [{}]({}) ({date})", post.title, post.link);
