@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Всегда виноват DNS](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-10-06.md) (06.10.2023)
 - [Все современные фреймворки работают над классными фичами, отгадай кого в списке нет?](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-30.md) (30.09.2023)
 - [Поднять баблишка никогда не поздно](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-15.md) (15.09.2023)
 - [Клоун в твиттере или стратегия запуска нового продукта](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-08.md) (08.09.2023)
