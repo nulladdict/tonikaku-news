@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [ViteConf 2023](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-10-13.md) (13.10.2023)
 - [Всегда виноват DNS](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-10-06.md) (06.10.2023)
 - [Все современные фреймворки работают над классными фичами, отгадай кого в списке нет?](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-30.md) (30.09.2023)
 - [Поднять баблишка никогда не поздно](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-09-15.md) (15.09.2023)
