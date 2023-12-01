@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Декабрь — пора advent of code](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-12-01.md) (01.12.2023)
 - [Вот бы и react ананосировал свои фичи за пределами next.js](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-11-17.md) (17.11.2023)
 - [~~Git~~CopilotHub](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-11-10.md) (10.11.2023)
 - [Bun заставляет nodejs развиваться](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-11-03.md) (03.11.2023)
