@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Remix это мостик между настоящим и будущим реакта](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-01-12.md) (12.01.2024)
 - [Новогодние ссылки](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-12-30.md) (30.12.2023)
 - [Декабрь — пора advent of code](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-12-01.md) (01.12.2023)
 - [Вот бы и react ананосировал свои фичи за пределами next.js](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2023-11-17.md) (17.11.2023)
