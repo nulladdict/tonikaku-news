@@ -1,6 +1,7 @@
 use std::{fs, io::Write};
 
 use anyhow::Result;
+use leptos::*;
 use rss::{Channel, Guid, Item};
 
 use crate::post::Post;
@@ -13,55 +14,78 @@ pub fn generate_public(posts: &[Post]) -> Result<()> {
 }
 
 fn add_index(posts: &[Post]) -> Result<()> {
-    let latest_posts = posts
+    leptos_dom::HydrationCtx::stop_hydrating();
+    let posts = posts.to_vec();
+    let content = ssr::render_to_string(move || view! { <Document posts /> });
+    let mut index = fs::File::create("./public/index.html")?;
+    index.write_all(b"<!DOCTYPE html>")?;
+    index.write_all(content.as_bytes())?;
+    index.write_all(b"\n")?;
+    Ok(())
+}
+
+#[component]
+fn Document(posts: Vec<Post>) -> impl IntoView {
+    view! {
+        <html lang="ru">
+            <Head />
+            <Body posts />
+        </html>
+    }
+}
+
+#[component]
+fn Head() -> impl IntoView {
+    view! {
+        <head>
+            {r#"<meta charset="utf-8">"#}
+            <title>Tonikaku News</title>
+            {r#"<meta name="viewport" content="width=device-width, initial-scale=1">"#}
+            {r#"<meta name="description" content="ad-hoc интересности о фронтенде, вебе и не только">"#}
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="./feed.rss" />
+            <style>{r#":root{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;}}"#}</style>
+        </head>
+    }
+}
+
+#[component]
+fn Body(posts: Vec<Post>) -> impl IntoView {
+    let last_post = posts.len();
+    let content_href = "https://github.com/nulladdict/tonikaku-news/blob/main/README.md";
+    let rss_href = "./feed.rss";
+    view! {
+        <body>
+            <article>
+                <h1>"ad-hoc интересности о фронтенде, вебе и не только"</h1>
+                <main>
+                    <p>"Весь контент "<a href=content_href>"живёт на гитхабе"</a>", вот последние посты:"</p>
+                    <ol reversed start=last_post><LatestPosts posts /></ol>
+                    <p>"Этот сайт нужен только чтобы "<a href=rss_href>"подписаться по RSS"</a></p>
+                </main>
+            </article>
+        </body>
+    }
+}
+#[component]
+fn LatestPosts(posts: Vec<Post>) -> impl IntoView {
+    posts
         .iter()
         .rev()
         .take(8)
-        .map(|post| {
-            format!(
-                r#"<li><a href="{}">{}</a> (<time datetime="{}">{}</time>)</li>"#,
-                post.link,
-                post.title,
-                post.real_date.format("%Y-%m-%d"),
-                post.real_date.format("%d.%m.%Y")
-            )
-        })
-        .collect::<Vec<_>>()
-        .join("\n");
-    let last_post = posts.len();
-    let mut index = fs::File::create("./public/index.html")?;
-    let content = format!(
-        r#"
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Tonikaku News</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ad-hoc интересности о фронтенде, вебе и не только">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="./feed.rss" />
-  <style>
-    :root {{
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;
-    }}
-  </style>
-</head>
-<body>
-  <article>
-    <h1>ad-hoc интересности о фронтенде, вебе и не только</h1>
-    <main>
-      <p>Весь контент <a href="https://github.com/nulladdict/tonikaku-news/blob/main/README.md">живет на гитхабе</a>, вот последние посты:</p>
-      <ol reversed start="{last_post}">
-        {latest_posts}
-      </ol>
-      <p>Этот сайт нужен только чтобы <a href="./feed.rss">подписаться по RSS</a></p>
-    </main>
-  </article>
-</body>
-</html>"#
-    );
-    index.write_all(content.as_bytes())?;
-    Ok(())
+        .cloned()
+        .map(|post| view! { <Post post /> })
+        .collect_view()
+}
+
+#[component]
+fn Post(post: Post) -> impl IntoView {
+    let date_attr = post.real_date.format("%Y-%m-%d").to_string();
+    let date_text = post.real_date.format("%d.%m.%Y").to_string();
+    view! {
+        <li>
+            <a href=post.link>{post.title}</a>" ("<time datetime=date_attr>{date_text}</time>")"
+        </li>
+    }
 }
 
 fn add_feed(posts: &[Post]) -> Result<()> {
