@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Никогда не бывает много рантаймов для js](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-09.md) (09.02.2024)
 - [Apple не может сделать нормально](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-01-26.md) (26.01.2024)
 - [Дизайни хорошее апи в котором меньше сюрпризов и больше контроля.](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-01-20.md) (20.01.2024)
 - [Remix это мостик между настоящим и будущим реакта](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-01-12.md) (12.01.2024)
