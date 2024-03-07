@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Программировать на Си больше нелегально](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-03-07.md) (07.03.2024)
 - [Текст в видосик или голливуд в шоке](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-16.md) (16.02.2024)
 - [Никогда не бывает много рантаймов для js](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-09.md) (09.02.2024)
 - [Apple не может сделать нормально](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-01-26.md) (26.01.2024)
