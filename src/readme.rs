@@ -11,7 +11,7 @@ pub fn update_readme(posts: &[Post]) -> Result<()> {
         .map(|post| {
             let date = post.real_date.format("%d.%m.%Y");
             let text = format!("- [{}]({}) ({date})", post.title, post.link);
-            return text;
+            text
         })
         .collect::<Vec<_>>()
         .join("\n");

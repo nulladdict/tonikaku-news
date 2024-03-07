@@ -21,12 +21,12 @@ impl Post {
             .and_then(|name| name.to_str())
             .context(format!("invalid file name {path:?}"))?;
 
-        let title = get_title(&path)?;
+        let title = get_title(path)?;
         let link =
             format!("https://github.com/nulladdict/tonikaku-news/blob/main/posts/{file_name}.md");
         let real_date = NaiveDate::parse_from_str(file_name, "%Y-%m-%d")
             .context(format!("invalid date {file_name}"))?;
-        let pub_time = get_last_modified_time(&path)?;
+        let pub_time = get_last_modified_time(path)?;
 
         Ok(Post {
             title,
@@ -45,7 +45,7 @@ lazy_static! {
 }
 
 fn get_title(path: &PathBuf) -> Result<String> {
-    let content = fs::read_to_string(&path).context("cannot read file {path:?}")?;
+    let content = fs::read_to_string(path).context("cannot read file {path:?}")?;
     let title = TITLE_REGEX
         .captures(&content)
         .and_then(|captures| captures.get(1))
@@ -67,7 +67,9 @@ fn get_last_modified_time(path: &PathBuf) -> Result<DateTime<Utc>> {
     let last_modified = last_modified.trim();
     if last_modified.is_empty() {
         if std::env::var("CI").is_ok() {
-            return Err(anyhow::anyhow!("cannot get last modified time for {path:?}"));
+            return Err(anyhow::anyhow!(
+                "cannot get last modified time for {path:?}"
+            ));
         }
         return Ok(offset::Utc::now());
     };

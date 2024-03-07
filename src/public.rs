@@ -14,7 +14,7 @@ pub fn generate_public(posts: &[Post]) -> Result<()> {
 }
 
 fn add_index(posts: &[Post]) -> Result<()> {
-    leptos_dom::HydrationCtx::stop_hydrating();
+    // leptos_dom::HydrationCtx::stop_hydrating();
     let posts = posts.to_vec();
     let content = ssr::render_to_string(move || view! { <Document posts /> });
     let mut index = fs::File::create("./public/index.html")?;
@@ -43,7 +43,7 @@ fn Head() -> impl IntoView {
             {r#"<meta name="viewport" content="width=device-width, initial-scale=1">"#}
             {r#"<meta name="description" content="ad-hoc интересности о фронтенде, вебе и не только">"#}
             <link rel="alternate" type="application/rss+xml" title="RSS" href="./feed.rss" />
-            <style>{r#":root{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;}}"#}</style>
+            <style>{r#":root{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;color-scheme:light dark;}}"#}</style>
         </head>
     }
 }
@@ -112,7 +112,7 @@ fn add_feed(posts: &[Post]) -> Result<()> {
 
     let mut rss_feed = fs::File::create("./public/feed.rss")?;
     channel.pretty_write_to(&mut rss_feed, b' ', 2)?;
-    rss_feed.write(b"\n")?;
+    rss_feed.write_all(b"\n")?;
 
     Ok(())
 }
