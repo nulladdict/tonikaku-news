@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Новый рантайм и новый кейс против Apple](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-03-22.md) (22.03.2024)
 - [Программировать на Си теперь нелегально](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-03-07.md) (07.03.2024)
 - [Текст в видосик или голливуд в шоке](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-16.md) (16.02.2024)
 - [Никогда не бывает много рантаймов для js](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-09.md) (09.02.2024)
