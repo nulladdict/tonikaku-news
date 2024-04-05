@@ -1,5 +1,6 @@
 # ad-hoc интересности о фронтенде, вебе и не только
 
+- [Когда два года работал на бекдор, но не пошло](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-04-05.md) (05.04.2024)
 - [Новый рантайм и новый кейс против Apple](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-03-22.md) (22.03.2024)
 - [Программировать на Си теперь нелегально](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-03-07.md) (07.03.2024)
 - [Текст в видосик или голливуд в шоке](https://github.com/nulladdict/tonikaku-news/blob/main/posts/2024-02-16.md) (16.02.2024)
